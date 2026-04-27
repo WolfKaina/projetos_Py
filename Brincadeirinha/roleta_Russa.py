@@ -14,32 +14,32 @@ while True:
         else:
             exit()
     else:
-        girar = input ("Gire o Tambor: [G] ").upper()
-        if girar == "G":     
-            random_tambor = random.randint(1, capac_tambor)
-            print(f"{random_tambor} / {random_cartucho}")
-            print(cont)
         while True:
-            atirar = input ("Atire [A]").upper()
-            if atirar != "A":
-                print("Engraçadinho, tente novamente")
-                continue
+            girar = input ("Gire o Tambor: [G] ").upper()
+            if girar == "G":     
+                random_tambor = random.randint(1, capac_tambor)
+                print(f"{random_tambor} / {random_cartucho}")
+                print(cont)
             else:
-                break
-        if random_cartucho == random_tambor:
-            print("Você Morreu!\n")
-            exit()
-        else:
-            escolha = input(f"Você passou, deseja continuar? [S/N]\n").upper()
-            if escolha == "S":
-                cont +=1
                 continue
-            else:
-                print("Devia ter pensado nisso antes de jogar \n Continue...\n")
-                cont +=1
-                continue
-                        
-
         
-
-
+            while True:
+                atirar = input ("Atire [A]").upper()
+                if atirar != "A":
+                    print("Engraçadinho, tente novamente")
+                    continue
+                else:
+                    break
+            if random_cartucho == random_tambor:
+                print("Você Morreu!\n")
+                exit()
+            else:
+                escolha = input(f"Você passou, deseja continuar? [S/N]\n").upper()
+                if escolha == "S":
+                    cont +=1
+                    continue
+                else:
+                    print("Devia ter pensado nisso antes de jogar \n Continue...\n")
+                    cont +=1
+                    continue
+                            
