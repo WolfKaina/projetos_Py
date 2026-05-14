@@ -2,7 +2,7 @@ import random  #https://docs.python.org/pt-br/3/library/random.html
 
 print("SEJA MUITO BEM VINDO A ROLETA RUSSA")
 
-capac_tambor = int(6)
+capac_tambor = 5
 cont = 0
 random_cartucho = random.randint(1, capac_tambor)
 print(random_cartucho)
